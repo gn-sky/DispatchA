@@ -9,14 +9,13 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  users: Object;
+  trucks: Object;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-      this.users = data
-      console.log(this.users)
+    this.data.getUsers().subscribe(trucks => {
+      this.trucks = trucks
     })
   }
 
